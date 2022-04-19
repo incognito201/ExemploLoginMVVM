@@ -4,6 +4,75 @@
              xmlns:local="clr-namespace:ExemploLoginMVVM.WPF"
              StartupUri="\Views\MainWindow.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="LightTextColor" Color="White"/>
+        <SolidColorBrush x:Key="DarkTextColor" Color="#222f3e"/>
+        <SolidColorBrush x:Key="PrimaryLightColor" Color="#55efc4"/>
+        <SolidColorBrush x:Key="DarkBackground" Color="#222f3e"/>
+        <SolidColorBrush x:Key="DarkColorZone" Color="#2C3A47"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource LightTextColor}" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="DarkTitle">
+            <Setter Property="Foreground" Value="#2C3A47" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="DarkTextBox">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="{StaticResource DarkBackground}" />
+            <Setter Property="Padding" Value="5, 0, 0, 0" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="{StaticResource LightTextColor}" />
+            <Setter Property="CaretBrush" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="PasswordBox" x:Key="DarkPasswordBox">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="{StaticResource DarkBackground}" />
+            <Setter Property="Padding" Value="5, 0, 0, 0" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="{StaticResource LightTextColor}" />
+            <Setter Property="CaretBrush" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Button" x:Key="PrimaryFlatButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Padding="10">
+                            <ContentPresenter TextBlock.FontWeight="DemiBold" HorizontalAlignment="Center">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Foreground" Value="{StaticResource DarkTextColor}" />
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Background" Value="#dcdde1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="{StaticResource PrimaryLightColor}" />
+                                            <Setter Property="Cursor" Value="Hand" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

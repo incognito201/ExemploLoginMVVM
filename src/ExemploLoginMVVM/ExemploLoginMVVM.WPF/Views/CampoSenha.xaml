@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ExemploLoginMVVM.WPF.Views.CampoSenha"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExemploLoginMVVM.WPF.Views"
+             mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:bh="clr-namespace:ExemploLoginMVVM.WPF.Behavior"
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <StackPanel Margin="0, 10, 0, 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Grid.Row="1" Margin="5" Source="../Images/password_icon.png" Height="32" Width="32" />
+
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10, 0, 0, 0">Senha:</TextBlock>
+            <PasswordBox Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource DarkPasswordBox}">
+                <i:Interaction.Behaviors>
+                    <bh:PasswordBoxBehavior />
+                </i:Interaction.Behaviors>
+            </PasswordBox>
+        </Grid>
+        <Separator />
+    </StackPanel>
+</UserControl>

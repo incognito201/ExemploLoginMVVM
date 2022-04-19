@@ -74,6 +74,12 @@
     <Compile Include="Behavior\PasswordBoxBehavior.cs" />
     <Compile Include="Utils\SecurePasswordHasher.cs" />
     <Compile Include="Utils\SecureStringUtil.cs" />
+    <Compile Include="Views\CampoEmail.xaml.cs">
+      <DependentUpon>CampoEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CampoSenha.xaml.cs">
+      <DependentUpon>CampoSenha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -81,6 +87,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\CampoEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CampoSenha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,8 +127,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\email_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\password_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.5.1\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.1\build\Fody.targets')" />

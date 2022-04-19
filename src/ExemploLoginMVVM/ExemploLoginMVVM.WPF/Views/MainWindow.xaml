@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExemploLoginMVVM.WPF.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#3742fa" Offset="0.0" />
+                <GradientStop Color="#d63031" Offset="0.12" />
+                <GradientStop Color="#3742fa" Offset="0.75" />
+                <GradientStop Color="#fd9644" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+
+            <Border Padding="20" Background="#58B19F">
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource DarkTitle}">OLÁ NOVAMENTE!</TextBlock>
+            </Border>
+
+            <Border Background="{StaticResource DarkColorZone}" Padding="20">
+                <StackPanel>
+
+                    <local:CampoEmail />
+                    <local:CampoSenha />
+
+                    <Button Style="{StaticResource PrimaryFlatButton}" Margin="0, 20, 0, 0">ENTRAR</Button>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
     </Grid>
 </Window>
