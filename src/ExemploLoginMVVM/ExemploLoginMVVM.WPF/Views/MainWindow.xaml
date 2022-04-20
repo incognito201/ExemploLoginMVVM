@@ -29,7 +29,7 @@
                     <local:CampoEmail />
                     <local:CampoSenha />
 
-                    <Button Style="{StaticResource PrimaryFlatButton}" Margin="0, 20, 0, 0">ENTRAR</Button>
+                    <Button Command="{Binding LoginCommand}" Style="{StaticResource PrimaryFlatButton}" Margin="0, 20, 0, 0">ENTRAR</Button>
                 </StackPanel>
             </Border>
 

@@ -22,7 +22,7 @@
             <Image Grid.Column="0" Grid.Row="1" Margin="5" Source="../Images/email_icon.png" Height="32" Width="32" />
 
             <TextBlock Grid.Column="1" Grid.Row="0" Margin="10, 0, 0, 0">Email:</TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource DarkTextBox}" />
+            <TextBox Text="{Binding Email}" Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource DarkTextBox}" />
         </Grid>
         <Separator />
     </StackPanel>

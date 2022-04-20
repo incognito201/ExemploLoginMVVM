@@ -24,11 +24,11 @@
             <Image Grid.Column="0" Grid.Row="1" Margin="5" Source="../Images/password_icon.png" Height="32" Width="32" />
 
             <TextBlock Grid.Column="1" Grid.Row="0" Margin="10, 0, 0, 0">Senha:</TextBlock>
-            <PasswordBox Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource DarkPasswordBox}">
-                <i:Interaction.Behaviors>
+            <TextBox Text="{Binding Senha}" Grid.Column="1" Grid.Row="1" Margin="5" Style="{StaticResource DarkTextBox}">
+                <!--<i:Interaction.Behaviors>
                     <bh:PasswordBoxBehavior />
-                </i:Interaction.Behaviors>
-            </PasswordBox>
+                </i:Interaction.Behaviors>-->
+            </TextBox>
         </Grid>
         <Separator />
     </StackPanel>
